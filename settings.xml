@@ -4,41 +4,21 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <profiles>
     <profile>
-    
-     <distributionManagement>
-    <repository>
-     <id>maven.openflexo.org</id>
-        <name>maven.openflexo.org-releases</name>
-        <url>https://maven.openflexo.org/artifactory/openflexo-release</url>
-    </repository>
-    <snapshotRepository>
-      <id>maven.openflexo.org</id>
-        <name>maven.openflexo.org-snapshots</name>
-        <url>https://maven.openflexo.org/artifactory/openflexo-snapshot</url>
-    </snapshotRepository>
-    <site>
-      <!-- Use mvn site:stage to get a working local copy of site AFTER building it normally -->
-      <id>local-viewing</id>
-      <url>file://${project.baseDir}/target/staging/</url>
-    </site>
-  </distributionManagement>
-    
-    
       <id>artifactory</id>
       <repositories>
         <repository>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
-           <id>maven.openflexo.org</id>
-        	<name>maven.openflexo.org-releases</name>
-       	 	<url>https://maven.openflexo.org/artifactory/openflexo-release</url>
+          <id>openflexo-libs-release</id>
+          <name>libs-release</name>
+          <url>https://maven.openflexo.org/artifactory/libs-release</url>
         </repository>
         <repository>
           <snapshots />
-         <id>maven.openflexo.org</id>
-        <name>maven.openflexo.org-snapshots</name>
-        <url>https://maven.openflexo.org/artifactory/openflexo-snapshot</url>
+          <id>openflexo-libs-snapshots</id>
+          <name>libs-snapshot</name>
+          <url>https://maven.openflexo.org/artifactory/libs-snapshot</url>
         </repository>
       </repositories>
       <pluginRepositories>
@@ -46,15 +26,15 @@
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
-          <id>maven.openflexo.org</id>
-        	<name>maven.openflexo.org-releases</name>
-       	 	<url>https://maven.openflexo.org/artifactory/openflexo-release</url>
+          <id>openflexo-plugins-release</id>
+          <name>plugins-release</name>
+          <url>https://maven.openflexo.org/artifactory/plugins-release</url>
         </pluginRepository>
         <pluginRepository>
           <snapshots />
-           <id>maven.openflexo.org</id>
-        <name>maven.openflexo.org-snapshots</name>
-        <url>https://maven.openflexo.org/artifactory/openflexo-snapshot</url>
+          <id>openflexo-snapshots</id>
+          <name>plugins-snapshot</name>
+          <url>https://maven.openflexo.org/artifactory/plugins-snapshot</url>
         </pluginRepository>
 	<pluginRepository>
 		<id>Codehaus repository</id>
