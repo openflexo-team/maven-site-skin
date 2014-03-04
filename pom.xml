@@ -46,23 +46,6 @@ under the License.
     <system>jira</system>
     <url>http://jira.codehaus.org/browse/MSKINS/component/12531</url>
   </issueManagement-->
- <distributionManagement>
-    <repository>
-     <id>maven.openflexo.org</id>
-        <name>maven.openflexo.org-releases</name>
-        <url>https://maven.openflexo.org/artifactory/openflexo-release</url>
-    </repository>
-    <snapshotRepository>
-      <id>maven.openflexo.org</id>
-        <name>maven.openflexo.org-snapshots</name>
-        <url>https://maven.openflexo.org/artifactory/openflexo-snapshot</url>
-    </snapshotRepository>
-    <site>
-      <!-- Use mvn site:stage to get a working local copy of site AFTER building it normally -->
-      <id>local-viewing</id>
-      <url>file://${project.baseDir}/target/staging/</url>
-    </site>
-  </distributionManagement>
   <licenses>
     <license>
       <name>GNU General Public License (GPL) v3</name>
