@@ -437,4 +437,16 @@
       </plugin>
     </plugins>
   </reporting>
+  <issueManagement>
+  	<system>jira</system>
+  	<url>https://bugs.openflexo.org</url>
+  </issueManagement>
+  <ciManagement>
+  	<system>Jenkins</system>
+  	<url>https://jenkins.openflexo.org/</url>
+  </ciManagement>
+  <scm>
+  	<connection>scm:git:ssh://git@github.com:openflexo-team/maven-site-skin.git</connection>
+  	<url>https://github.com/openflexo-team/maven-site-skin</url>
+  </scm>
 </project>
