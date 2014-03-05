@@ -25,10 +25,10 @@ under the License.
   <parent>
     <groupId>org.openflexo</groupId>
     <artifactId>openflexo-production</artifactId>
-    <version>0.1</version>
+    <version>0.1-SNAPSHOT</version>
   </parent> 
 
-  <artifactId>maven-site-skin</artifactId>
+  <artifactId>openflexo-skin</artifactId>
   <version>1.2</version>
 
   <name>OpenFlexo Skin</name>
