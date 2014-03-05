@@ -28,7 +28,6 @@ under the License.
     <version>0.1</version>
   </parent> 
 
-  <groupId>org.openflexo</groupId>
   <artifactId>openflexo-skin</artifactId>
   <version>1.2</version>
 
@@ -56,12 +55,12 @@ under the License.
   <profiles>
     <profile>
       <id>rc</id>
-      <!-- <distributionManagement>
+      <distributionManagement>
         <site>
           <id>openflexo.website</id>
           <url>scp://www.openflexo.org/skins/${site.destination}</url>
         </site>
-      </distributionManagement> -->
+      </distributionManagement>
     </profile>
     <profile>
       <id>run-its</id>
@@ -154,7 +153,7 @@ under the License.
   	<system>Jenkins</system>
   	<url>https://jenkins.openflexo.org/</url>
   </ciManagement>
-<!--   <distributionManagement>
+  <distributionManagement>
     <repository>
       <id>openflexo-release</id>
       <name>Open Flexo Releases</name>
@@ -166,9 +165,9 @@ under the License.
       <url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
     </snapshotRepository>
     <site>
-      Use mvn site:stage to get a working local copy of site AFTER building it normally
+      <!--  Use mvn site:stage to get a working local copy of site AFTER building it normally-->
       <id>local-viewing</id>
       <url>file://${project.baseDir}/target/staging/</url>
     </site>
-  </distributionManagement> -->
+  </distributionManagement>
 </project>
