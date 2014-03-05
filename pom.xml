@@ -154,7 +154,7 @@ under the License.
   	<system>Jenkins</system>
   	<url>https://jenkins.openflexo.org/</url>
   </ciManagement>
-  <distributionManagement>
+<!--   <distributionManagement>
     <repository>
       <id>openflexo-release</id>
       <name>Open Flexo Releases</name>
@@ -166,9 +166,9 @@ under the License.
       <url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
     </snapshotRepository>
     <site>
-      <!-- Use mvn site:stage to get a working local copy of site AFTER building it normally -->
+      Use mvn site:stage to get a working local copy of site AFTER building it normally
       <id>local-viewing</id>
       <url>file://${project.baseDir}/target/staging/</url>
     </site>
-  </distributionManagement> 
+  </distributionManagement> -->
 </project>
