@@ -22,7 +22,7 @@ under the License.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-   <parent>
+  <parent>
     <groupId>org.openflexo</groupId>
     <artifactId>openflexo-production</artifactId>
     <version>0.1</version>
@@ -153,7 +153,7 @@ under the License.
   	<system>Jenkins</system>
   	<url>https://jenkins.openflexo.org/</url>
   </ciManagement>
-  <distributionManagement>
+  <!-- <distributionManagement>
     <repository>
       <id>openflexo-release</id>
       <name>Open Flexo Releases</name>
@@ -165,9 +165,9 @@ under the License.
       <url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
     </snapshotRepository>
     <site>
-      <!--  Use mvn site:stage to get a working local copy of site AFTER building it normally-->
+       Use mvn site:stage to get a working local copy of site AFTER building it normally
       <id>local-viewing</id>
       <url>file://${project.baseDir}/target/staging/</url>
     </site>
-  </distributionManagement>
+  </distributionManagement> -->
 </project>
