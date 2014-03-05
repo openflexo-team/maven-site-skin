@@ -22,12 +22,11 @@ under the License.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.apache.maven.skins</groupId>
-    <artifactId>maven-skins</artifactId>
-    <version>6</version>
-    <relativePath>../maven-skins/pom.xml</relativePath>
-  </parent>
+   <parent>
+    <groupId>org.openflexo</groupId>
+    <artifactId>openflexo-production</artifactId>
+    <version>0.1</version>
+  </parent> 
 
   <groupId>org.openflexo</groupId>
   <artifactId>openflexo-skin</artifactId>
@@ -57,13 +56,12 @@ under the License.
   <profiles>
     <profile>
       <id>rc</id>
-      <distributionManagement>
-        <!-- Cannot define in parent -->
+      <!-- <distributionManagement>
         <site>
           <id>openflexo.website</id>
           <url>scp://www.openflexo.org/skins/${site.destination}</url>
         </site>
-      </distributionManagement>
+      </distributionManagement> -->
     </profile>
     <profile>
       <id>run-its</id>
@@ -145,15 +143,32 @@ under the License.
   	<url>http://www.openflexo.org</url>
   </organization>
   <scm>
-  	<url>https://github.com/openflexo-team/maven-site-skin</url>
-  	<connection>scm:git:ssh://git@github.com:openflexo-team/maven-site-skin.git</connection>
+   <connection>scm:git:ssh://git@github.com:openflexo-team/maven-site-skin.git</connection>
+   <url>https://github.com/openflexo-team/maven-site-skin</url>
   </scm>
   <issueManagement>
-  	<system>jira</system>
-  	<url>https://bugs.openflexo.org</url>
-  </issueManagement>
+    <system>jira</system>
+    <url>https://bugs.openflexo.org/browse/</url>
+  </issueManagement> 
   <ciManagement>
   	<system>Jenkins</system>
   	<url>https://jenkins.openflexo.org/</url>
   </ciManagement>
+  <distributionManagement>
+    <repository>
+      <id>openflexo-release</id>
+      <name>Open Flexo Releases</name>
+      <url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
+    </repository>
+    <snapshotRepository>
+      <id>openflexo-snapshot</id>
+      <name>Open Flexo Snapshots</name>
+      <url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
+    </snapshotRepository>
+    <site>
+      <!-- Use mvn site:stage to get a working local copy of site AFTER building it normally -->
+      <id>local-viewing</id>
+      <url>file://${project.baseDir}/target/staging/</url>
+    </site>
+  </distributionManagement> 
 </project>
