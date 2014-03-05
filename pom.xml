@@ -28,7 +28,7 @@ under the License.
     <version>0.1</version>
   </parent> 
 
-  <artifactId>openflexo-skin</artifactId>
+  <artifactId>maven-site-skin</artifactId>
   <version>1.2</version>
 
   <name>OpenFlexo Skin</name>
