@@ -29,7 +29,7 @@ under the License.
   </parent> 
 
   <artifactId>openflexo-skin</artifactId>
-  <version>1.2</version>
+  <version>1.2-SNAPSHOT</version>
 
   <name>OpenFlexo Skin</name>
   <description>OpenFlexo Skin</description>
@@ -170,4 +170,5 @@ under the License.
       <url>file://${project.baseDir}/target/staging/</url>
     </site>
   </distributionManagement> -->
+  <groupId>org.openflexo</groupId>
 </project>
