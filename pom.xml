@@ -1,24 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!--
-Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
-distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
-to you under the Apache License, Version 2.0 (the
-"License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing,
-software distributed under the License is distributed on an
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
-specific language governing permissions and limitations
-under the License.
--->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -28,6 +8,7 @@ under the License.
     <version>0.1-SNAPSHOT</version>
   </parent> 
 
+  <groupId>org.openflexo</groupId>
   <artifactId>openflexo-skin</artifactId>
   <version>1.2-SNAPSHOT</version>
 
@@ -35,15 +16,6 @@ under the License.
   <description>OpenFlexo Skin</description>
   <url>http://www.openflexo.org/skins/${site.destination}</url>
 
-  <!--scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/skins/tags/maven-application-skin-1.0</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/skins/tags/maven-application-skin-1.0</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/skins/tags/maven-application-skin-1.0</url>
-  </scm>
-  <issueManagement>
-    <system>jira</system>
-    <url>http://jira.codehaus.org/browse/MSKINS/component/12531</url>
-  </issueManagement-->
   <licenses>
     <license>
       <name>GNU General Public License (GPL) v3</name>
@@ -51,6 +23,20 @@ under the License.
     </license>
   </licenses>
 
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.0.4</version>
+                    <configuration>
+                        <topSiteURL>https://www.openflexo.org/sites</topSiteURL>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
   <profiles>
     <profile>
@@ -137,38 +123,8 @@ under the License.
       </reporting>
     </profile>
   </profiles>
-  <organization>
-  	<name>Openflexo</name>
-  	<url>http://www.openflexo.org</url>
-  </organization>
   <scm>
    <connection>scm:git:ssh://git@github.com:openflexo-team/maven-site-skin.git</connection>
    <url>https://github.com/openflexo-team/maven-site-skin</url>
   </scm>
-  <issueManagement>
-    <system>jira</system>
-    <url>https://bugs.openflexo.org/browse/</url>
-  </issueManagement> 
-  <ciManagement>
-  	<system>Jenkins</system>
-  	<url>https://jenkins.openflexo.org/</url>
-  </ciManagement>
-  <!-- <distributionManagement>
-    <repository>
-      <id>openflexo-release</id>
-      <name>Open Flexo Releases</name>
-      <url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
-    </repository>
-    <snapshotRepository>
-      <id>openflexo-snapshot</id>
-      <name>Open Flexo Snapshots</name>
-      <url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
-    </snapshotRepository>
-    <site>
-       Use mvn site:stage to get a working local copy of site AFTER building it normally
-      <id>local-viewing</id>
-      <url>file://${project.baseDir}/target/staging/</url>
-    </site>
-  </distributionManagement> -->
-  <groupId>org.openflexo</groupId>
 </project>
