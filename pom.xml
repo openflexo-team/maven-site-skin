@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.openflexo</groupId>
     <artifactId>openflexo-production</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.4-SNAPSHOT</version>
   </parent> 
 
   <groupId>org.openflexo</groupId>
@@ -15,28 +15,6 @@
   <name>OpenFlexo Skin</name>
   <description>OpenFlexo Skin</description>
   <url>http://www.openflexo.org/skins/${site.destination}</url>
-
-  <licenses>
-    <license>
-      <name>GNU General Public License (GPL) v3</name>
-      <url>http://www.gnu.org/licenses/gpl.txt</url>
-    </license>
-  </licenses>
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version>3.3</version>
-                    <configuration>
-                        <topSiteURL>https://www.openflexo.org/sites</topSiteURL>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
 
   <profiles>
     <profile>
