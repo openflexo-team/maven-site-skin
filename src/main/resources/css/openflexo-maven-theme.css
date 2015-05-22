@@ -48,7 +48,7 @@ th {
 }
 
 #contentBox h1 {
-    background-image: url( ../images/arrow.gif );
+    background-image: url( /images/arrow.gif );
     background-repeat: no-repeat;
     background-position: left bottom;
     border-bottom: 1px solid #DFDEDE;
@@ -88,22 +88,22 @@ code {
 }
 
 #legend li.externalLink {
-    background: url( ../images/external.png ) left top no-repeat;
+    background: url( /images/external.png ) left top no-repeat;
     padding-left: 18px;
 }
 
 a.externalLink, a.externalLink:link, a.externalLink:visited, a.externalLink:active, a.externalLink:hover {
-    background: url( ../images/external.png ) right center no-repeat;
+    background: url( /images/external.png ) right center no-repeat;
     padding-right: 18px;
 }
 
 #legend li.newWindow {
-    background: url( ../images/newwindow.png ) left top no-repeat;
+    background: url( /images/newwindow.png ) left top no-repeat;
     padding-left: 18px;
 }
 
 a.newWindow, a.newWindow:link, a.newWindow:visited, a.newWindow:active, a.newWindow:hover {
-    background: url( ../images/newwindow.png ) right center no-repeat;
+    background: url( /images/newwindow.png ) right center no-repeat;
     padding-right: 18px;
 }
 
@@ -164,19 +164,19 @@ dt {
 }
 
 .errormark, .warningmark, .donemark, .infomark {
-    background: url( ../images/icon_error_sml.gif ) no-repeat;
+    background: url( /images/icon_error_sml.gif ) no-repeat;
 }
 
 .warningmark {
-    background-image: url( ../images/icon_warning_sml.gif );
+    background-image: url( /images/icon_warning_sml.gif );
 }
 
 .donemark {
-    background-image: url( ../images/icon_success_sml.gif );
+    background-image: url( /images/icon_success_sml.gif );
 }
 
 .infomark {
-    background-image: url( ../images/icon_info_sml.gif );
+    background-image: url( /images/icon_info_sml.gif );
 }
 
 #leftColumn {
@@ -194,7 +194,7 @@ dt {
     line-height: 24px;
     height: 25px;
     width: 161px;
-    background-image: url( ../images/super.gif );
+    background-image: url( /images/super.gif );
     background-position: 0 0;
     background-repeat: no-repeat;
     display: block;
@@ -220,11 +220,11 @@ dt {
 }
 
 #navcolumn li.collapsed {
-    background-image: url( ../images/super.gif );
+    background-image: url( /images/super.gif );
 }
 
 #navcolumn li.expanded {
-    background-image: url( ../images/super.gif );
+    background-image: url( /images/super.gif );
     height: auto;
 }
 
@@ -235,13 +235,13 @@ dt {
 
 #navcolumn li a:hover {
     color: #fff !important;
-    background: url( ../images/super_hl.gif ) 0 -25px no-repeat;
+    background: url( /images/super_hl.gif ) 0 -25px no-repeat;
     display: block;
 }
 
 #navcolumn li a:active {
     color: #fff !important;
-    background: url( ../images/super_hl.gif ) 0 -50px no-repeat;
+    background: url( /images/super_hl.gif ) 0 -50px no-repeat;
     display: block;
 }
 
@@ -255,7 +255,7 @@ dt {
     text-indent: 30px !important;
     line-height: 20px !important;
     height: 20px !important;
-    background-image: url( ../images/supersub.gif ) !important;
+    background-image: url( /images/supersub.gif ) !important;
     font-size: 9px;
     width: 161px;
     background-repeat: no-repeat;
@@ -265,14 +265,14 @@ dt {
 
 #navcolumn li ul li a:hover {
     color: #fff !important;
-    background: url( ../images/super_hl_sub.gif ) 0 -20px no-repeat;
+    background: url( /images/super_hl_sub.gif ) 0 -20px no-repeat;
     background-position: right;
     width: 161px;
     display: block;
 }
 
 #footer {
-    background: url( ../images/footerborder.gif ) 0 5px repeat-x;
+    background: url( /images/footerborder.gif ) 0 5px repeat-x;
     padding: 14px 4px 12px 4px;
     margin-top: 2em;
 }
