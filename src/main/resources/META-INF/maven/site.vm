@@ -574,21 +574,22 @@
 
         <!--========== BEGIN JS INCLUSION ==========-->
 
-        <!-- JQuery -->
+        	<!-- JQuery -->
 		<script src="/inc/jquery/jquery-2.1.4.min.js"></script>
-        <!-- BootStrap -->
+        	<!-- BootStrap -->
 		<script src="/inc/bootstrap/js/bootstrap.min.js"></script>
 
-        <!-- Animations -->
+        	<!-- Animations -->
 		<script src="/inc/animations/js/wow.min.js"></script>
 		<script src="/inc/smoothscroll.js"></script>
 		<script src="/inc/owl-carousel/js/owl.carousel.min.js"></script>
 		<script src="/inc/stellar/js/jquery.stellar.min.js"></script>
 		<script src="/inc/classie.js"></script>
 		<script src="/inc/jquery.easing.min.js"></script>
-
 		<script src="/inc/jquery.counterup.min.js"></script>
 
+		<!-- Isotop for layouts -->
+		<script src="/inc/isotope.pkgd.min.js"></script>
 
 		<!-- Theme JS -->
 		<script src="/js/theme.js"></script>
@@ -639,14 +640,14 @@
 
   #cssIncludes()
   </head>
-    <body ng-app="GenericApp" ng-controller="OpenflexoWebsiteController" data-spy="scroll" data-target="#main-navbar">
+    <body ng-app="OpenflexoWebsite" ng-controller="OpenflexoWebsiteController" data-spy="scroll" data-target="#main-navbar">
       	<div class="body">
 
 
             <!--========== BEGIN HEADER ==========-->
             <header id="header" class="header-main" >
-    		<div class="void" id="minimenu" ng-include="'menu-vers-minisites.html'"></div>
-        	<div class="void" id="menu" ng-include="'menu.html'"></div>
+    		<div id="minimenu" ng-include="'/menu-vers-minisites.html'"></div>
+        	<div  id="menu" ng-include="'/menu.html'"></div>
 	        </header>
             <!-- ========= END HEADER =========-->
 
