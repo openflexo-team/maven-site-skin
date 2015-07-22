@@ -639,7 +639,7 @@
 
   #cssIncludes()
   </head>
-    <body ng-app="GenericApp" ng-controller="driversController" data-spy="scroll" data-target="#main-navbar">
+    <body ng-app="GenericApp" ng-controller="OpenflexoWebsiteController" data-spy="scroll" data-target="#main-navbar">
       	<div class="body">
 
 
