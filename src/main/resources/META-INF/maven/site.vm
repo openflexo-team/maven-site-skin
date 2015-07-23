@@ -601,7 +601,7 @@
 		<script src="/js/theme.js"></script>
 
 		<!-- Load Menus -->
-                <script> $("#menu").load("menu.html");  $("#minimenu").load("menu-vers-minisites.html"); </script>
+                <script> $("#menu").load("/menu.html");  $("#minimenu").load("/menu-vers-minisites.html"); </script>
 
 
         <!--========== END JS INCLUSION ==========-->
