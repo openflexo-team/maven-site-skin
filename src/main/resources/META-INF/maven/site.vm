@@ -548,6 +548,12 @@
 ##<!--******************************************************************* -->
 ##<!-- Generates html code for CSS Includes -->
 #macro ( cssIncludes )
+
+     <!--========== Google Fonts   ==========-->
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
+		<link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> <!-- OpenFlexo font -->
+
      <!--========== BEGIN CSS INCLUSION ==========-->
 
         <!-- BootStrap -->
@@ -594,10 +600,9 @@
 		<!-- Theme JS -->
 		<script src="/js/theme.js"></script>
 
-		<!-- Angular JS -->
-	  	<script src="/inc/angular/angular.min.js"></script>
-		<script src="/js/OpenflexoWebsiteApp.js"></script>
-  		<script src="/js/OpenflexoWebsiteControllers.js"></script>
+		<!-- Load Menus -->
+                <script> $("#menu").load("menu.html");  $("#minimenu").load("menu-vers-minisites.html"); </script>
+
 
         <!--========== END JS INCLUSION ==========-->
 
@@ -645,12 +650,14 @@
 
 
             <!--========== BEGIN HEADER ==========-->
-            <header id="header" class="header-main" >
-    		<div id="minimenu" ng-include="'/menu-vers-minisites.html'"></div>
-        	<div  id="menu" ng-include="'/menu.html'"></div>
-	        </header>
+            <header id="header" class="header-main">              
+            	<nav id="all-navbars" class="navbar navbar-default navbar-fixed-top" role="navigation"> <!-- Classes: navbar-default, navbar-inverse, navbar-fixed-top, navbar-fixed-bottom, navbar-transparent. Note: If you use non-transparent navbar, set "height: 98px;" to #header -->
+    				<div id="minimenu" ></div>
+            		<div id="menu"></div>
+                </nav>
+            </header>
             <!-- ========= END HEADER =========-->
-
+            
     <div id="banner">
       #banner( $decoration.bannerLeft "bannerLeft" )
       #banner( $decoration.bannerRight "bannerRight" )
