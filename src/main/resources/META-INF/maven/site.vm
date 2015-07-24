@@ -601,7 +601,7 @@
 		<script src="/js/theme.js"></script>
 
 		<!-- Load Menus -->
-                <script> $("#menu").load("/menu.html");  $("#minimenu").load("/menu-vers-minisites.html"); </script>
+                <script>$("#mainmenu").load("/menu-vers-minisites.html");$("#pagemenu").load("menu.html"); </script>
 
 
         <!--========== END JS INCLUSION ==========-->
@@ -651,9 +651,10 @@
 
             <!--========== BEGIN HEADER ==========-->
             <header id="header" class="header-main">              
-            	<nav id="all-navbars" class="navbar navbar-default navbar-fixed-top" role="navigation"> <!-- Classes: navbar-default, navbar-inverse, navbar-fixed-top, navbar-fixed-bottom, navbar-transparent. Note: If you use non-transparent navbar, set "height: 98px;" to #header -->
-    				<div id="minimenu" ></div>
-            		<div id="menu"></div>
+            	<nav id="all-navbars" class="navbar navbar-default navbar-fixed-top" role="navigation">
+                          <a class="navbar-brand page-scroll" href="index.html">OpenFlexo</a>
+            		<div id="mainmenu"></div>
+			<div id="pagemenu"></div>
                 </nav>
             </header>
             <!-- ========= END HEADER =========-->
