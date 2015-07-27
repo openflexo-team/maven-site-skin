@@ -39,6 +39,7 @@
 
  <custom>
 	<openflexo-skin>
+		<sideMenus>false</sideMenus>
 		<localMenu>sampleMenu.html</localMenu>
 	</openflexo-skin>
  </custom>

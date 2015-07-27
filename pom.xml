@@ -46,6 +46,7 @@
               </pomIncludes>
               <goals>
                 <goal>site</goal>
+                <goal>resources:resources</goal>
               </goals>
             </configuration>
             <executions>

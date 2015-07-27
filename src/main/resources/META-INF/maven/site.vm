@@ -652,9 +652,7 @@
   #cssIncludes()
   </head>
     <body ng-app="OpenflexoWebsite" ng-controller="OpenflexoWebsiteController" data-spy="scroll" data-target="#main-navbar">
-      	<div class="body">
 
-            
             <!--========== BEGIN HEADER ==========-->
             <header id="header" class="header-main">              
             	<nav id="all-navbars" class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -665,6 +663,8 @@
             </header>
             <!-- ========= END HEADER =========-->
             
+	<section>
+      	<div class="body">            
             	<!-- NO BANNER -->
 	<!--
     <div id="banner">
@@ -682,21 +682,28 @@
         <hr/>
       </div>
     </div>
-    <div id="leftColumn">
-      <div id="navcolumn">
-       #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
-       #mainMenu( $decoration.body.menus )
-       #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
-      </div>
-    </div>
-    <div id="bodyColumn">
-      <div id="contentBox">
-        $bodyContent
-      </div>
-    </div>
-    <div class="clear">
-      <hr/>
-    </div>
+     <div class="container">
+#if ( $customConfig.getChild('sideMenus').getValue().equals('true') )
+        <div class="row">
+    		<div class="col-sm-3 col-md-3 col-lg-3" id="leftColumn">
+	      		<div id="navcolumn">
+		       #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
+		       #mainMenu( $decoration.body.menus )
+		       #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
+		      </div>
+		 </div>
+    		<div class="col-sm-9 col-md-9 col-lg-9" id="bodyColumn">
+#else
+		<div class="col-sm-12 col-md-12 col-lg-12" id="bodyColumn">
+#end
+   		   <div id="contentBox">
+        		$bodyContent
+      		   </div>
+    	        </div>
+	</div>
+
+<!-- footer Row -->
+     <div class="row">    
     <div id="footer">
       <div class="xright">
       #if($decoration.body.footer)
@@ -710,6 +717,9 @@
       </div>
     </div>
     </div>
+
+    </div> <!-- end body-->
+   </section><!-- end body section -->
     #jsIncludes()
   </body>
 </html>

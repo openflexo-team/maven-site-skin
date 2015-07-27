@@ -88,7 +88,7 @@ Verbatim text
                      without box        
 ---------------------------------
 
-[figure] Figure caption
+[figure.png] Figure caption
 
 *----------*--------------+----------------:
 | Centered | Left-aligned | Right-aligned  |

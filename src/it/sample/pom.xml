@@ -52,10 +52,10 @@
                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>2.7</version> <!--
+                    <version>2.7</version> 
                     <configuration>
-                         <outputDirectory>../../sites-deployed/${project.name}</outputDirectory>
-                    </configuration> -->
+                         <outputDirectory>${project.build.directory}</outputDirectory>
+                    </configuration> 
                </plugin>
           </plugins>
           <!-- ************************
@@ -63,12 +63,13 @@
 	-->
           <resources>
                <resource>
-                    <directory>${basedir}</directory>
+                    <directory>${basedir}/src/</directory>
                     <filtering>true</filtering>
                     <includes>
                          <include>**/*.html</include>
                          <include>**/*.js</include>
                          <include>**/*.css</include>
+                         <include>**/*.png</include>
                     </includes>
                </resource>
           </resources>
