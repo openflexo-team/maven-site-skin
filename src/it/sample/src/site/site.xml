@@ -37,6 +37,12 @@
     <version>${skinVersion}</version>
   </skin>
 
+ <custom>
+	<openflexo-skin>
+		<localMenu>sampleMenu.html</localMenu>
+	</openflexo-skin>
+ </custom>
+
   <publishDate format="yyyy-MM-dd" position="right" />
   <version position="right" />
 
