@@ -561,6 +561,9 @@
 
      <!--========== BEGIN CSS INCLUSION ==========-->
 
+	<!-- reset some styles -->
+        	<link rel="stylesheet" href="/css/reset.css">
+
         <!-- BootStrap -->
 		<link rel="stylesheet" href="/inc/bootstrap/css/bootstrap.min.css">
         <!-- Animations -->
@@ -570,7 +573,6 @@
 
 
 	<!-- Master Stylesheets -->
-        	<link rel="stylesheet" href="/css/reset.css">
 		<link rel="stylesheet" href="/css/mobile.css">
         	<link rel="stylesheet" href="/css/openflexo.css">
 
