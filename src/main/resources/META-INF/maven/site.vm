@@ -603,10 +603,14 @@
 		<script src="/inc/isotope.pkgd.min.js"></script>
 
 		<!-- Theme JS -->
-		<script src="/js/theme.js"></script>
+		<script src="/inc/theme.js"></script>
 
 		<!-- Load Menus -->
-                <script>$("#mainmenu").load("/menu-vers-minisites.html");$("#pagemenu").load("$customConfig.getChild('localMenu').getValue()"); </script>
+		#if (! $customConfig.getChild('localMenu'))
+        	        <script>$("#mainmenu").load("/inc/html/menu-vers-minisites.html");$("#pagemenu").load("/inc/html/defaultmenu.html"); </script>
+		#else
+	                <script>$("#mainmenu").load("/inc/html/menu-vers-minisites.html");$("#pagemenu").load("$customConfig.getChild('localMenu').getValue()"); </script>
+		#end
 
 
         <!--========== END JS INCLUSION ==========-->
