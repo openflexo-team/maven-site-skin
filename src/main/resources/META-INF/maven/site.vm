@@ -633,11 +633,13 @@
 <!-- footer Row -->
     <div id="footer" class="footer">
     <div class="container text-center wow fadeIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+	<p>
       #if($decoration.body.footer)
         $decoration.body.footer
       #else
         Copyright &#169;#copyright()All rights reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )
       #end
+	</p>
       </div>
       </div>
     </div> <!-- end body-->
