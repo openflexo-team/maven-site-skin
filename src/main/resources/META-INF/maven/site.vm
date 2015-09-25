@@ -452,81 +452,7 @@
   #end
 #end
 ##
-##<!--******************************************************************* -->
-##<!-- Generates html code for 'poweredBy' => no need of this, to be deleted -->
-#macro ( poweredByLogo $poweredBy )
-  #if( $poweredBy )
-    #foreach ($item in $poweredBy)
-      #if( $item.href )
-        #set ( $href = $PathTool.calculateLink( $item.href, $relativePath ) )
-        #set ( $href = $href.replaceAll( '\\', '/' ) )
-      #else
-        #set ( $href="http://maven.apache.org/" )
-      #end
-##
-      #if( $item.name )
-        #set ( $name = $item.name )
-      #else
-        #set ( $name = $i18n.getString( "site-renderer", $locale, "template.builtby" )  )
-        #set ( $name = "${name} Maven"  )
-      #end
-##
-      #if( $item.img )
-        #set ( $img = $item.img )
-      #else
-        #set ( $img = "images/logos/maven-feather.png" )
-      #end
-##
-      #if ( ! ( $img.toLowerCase().startsWith("http:/") || $img.toLowerCase().startsWith("https:/") ||
-            $img.toLowerCase().startsWith("ftp:/") || $img.toLowerCase().startsWith("mailto:") ||
-            $img.toLowerCase().startsWith("file:/") || ($img.toLowerCase().indexOf("://") != -1) ) )
-        #set ( $img = $PathTool.calculateLink( $img, $relativePath ) )
-        #set ( $img = $img.replaceAll( '\\', '/' ) )
-      #end
-##
-      #if( $item.alt )
-        #set ( $alt = ' alt="' + $item.alt + '"' )
-      #else
-        #set ( $alt = ' alt="' + $name + '"' )
-      #end
-##
-      #if( $item.border )
-        #set ( $border = ' border="' + $item.border + '"' )
-      #else
-        #set ( $border = "" )
-      #end
-##
-      #if( $item.width )
-        #set ( $width = ' width="' + $item.width + '"' )
-      #else
-        #set ( $width = "" )
-      #end
-      #if( $item.height )
-        #set ( $height = ' height="' + $item.height + '"' )
-      #else
-        #set ( $height = "" )
-      #end
-      #if( $item.title )
-        #set ( $title = ' title="' + $item.title + '"' )
-      #else
-        #set ( $title = "" )
-      #end
-##
-      <a href="$href" title="$name" class="poweredBy">
-        <img class="poweredBy" $alt src="$img" $border $width $height $title />
-      </a>
-    #end
-    #if( $poweredBy.isEmpty() )
-      <a href="http://maven.apache.org/" title="$i18n.getString( "site-renderer", $locale, "template.builtby" ) Maven" class="poweredBy">
-        <img class="poweredBy" alt="$i18n.getString( "site-renderer", $locale, "template.builtby" ) Maven" src="$relativePath/images/logos/maven-feather.png" />
-      </a>
-    #end
-  #else
-    <a href="http://maven.apache.org/" title="$i18n.getString( "site-renderer", $locale, "template.builtby" ) Maven" class="poweredBy">
-      <img class="poweredBy" alt="$i18n.getString( "site-renderer", $locale, "template.builtby" ) Maven" src="$relativePath/images/logos/maven-feather.png" />
-    </a>
-  #end
-#end
+
 ##
 ##<!--******************************************************************* -->
 ##<!-- Generates html code for google analytics => no need yet -->
@@ -666,7 +592,6 @@
             </header>
             <!-- ========= END HEADER =========-->
             
-	<section>
       	<div class="body">            
             	<!-- NO BANNER -->
 	<!--
@@ -706,7 +631,6 @@
 	</div>
 
 <!-- footer Row -->
-     <div class="row">    
     <div id="footer" class="footer">
     <div class="container text-center wow fadeIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
       #if($decoration.body.footer)
@@ -716,14 +640,7 @@
       #end
       </div>
       </div>
-      <div class="clear">
-        <hr/>
-      </div>
-    </div>
-    </div>
-
     </div> <!-- end body-->
-   </section><!-- end body section -->
     #jsIncludes()
   </body>
 </html>
