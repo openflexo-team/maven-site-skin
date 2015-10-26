@@ -509,10 +509,9 @@
 
 
 	<!-- Master Stylesheets -->
-       	<link rel="stylesheet" href="/css/openflexo-maven-base.css">
-       	<link rel="stylesheet" href="/css/openflexo-maven-theme.css">
 		<link rel="stylesheet" href="/css/mobile.css">
        	<link rel="stylesheet" href="/css/openflexo.css">
+       	<link rel="stylesheet" href="/css/openflexo-maven-theme.css">
         <!--========== END CSS INCLUSION ==========-->
 
 #end
