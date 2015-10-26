@@ -173,17 +173,30 @@
 ##<!--******************************************************************* -->
 ##<!-- Generates html code for breadcrumbs -->
 #macro ( breadcrumbs $breadcrumbs )
-  #foreach( $item in $breadcrumbs )
-    #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
-    #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
-    #if ( ( $currentItemHref == '' ) )
-      #set ( $currentItemHref = './' )
-    #end
-##
-      #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height $item.title )
-      &gt;
-  #end
-  $shortTitle
+
+	<!-- local breadcrumb config -->
+		#if ($customConfig.getChild('displayBreadCrumbs'))
+			#if ( $customConfig.getChild('displayBreadCrumbs').getValue().equals('true') )
+			
+				<h1> Generating Bread Crumbs </h1>
+				
+  				#foreach( $item in $breadcrumbs )
+    				#set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
+    				#set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+   					#if ( ( $currentItemHref == '' ) )
+      					#set ( $currentItemHref = './' )
+    				#end
+					##
+      				#link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height $item.title )
+      				&gt;
+  				#end
+  				$shortTitle
+			#else
+				## Does not display anything
+				<h1> Should not display any thing</h1>
+			#end
+		#end
+
 #end
 ##
 ##<!--******************************************************************* -->
@@ -580,7 +593,7 @@
 
   #cssIncludes()
   </head>
-    <body ng-app="OpenflexoWebsite" ng-controller="OpenflexoWebsiteController" data-spy="scroll" data-target="#main-navbar">
+    <body  data-spy="scroll" data-target="#main-navbar">
 
             <!--========== BEGIN HEADER ==========-->
             <header id="header" class="header-main">              
@@ -599,17 +612,30 @@
       #banner( $decoration.bannerLeft "bannerLeft" )
       #banner( $decoration.bannerRight "bannerRight" )
 -->
-      <div class="clear">
-        <hr/>
-      </div>
 
-    <div class="breadcrumbs">
-      #publishDate( "left" $decoration.publishDate $decoration.version )
-      <div class="xright">#links( $decoration.body.links )#publishDate( "right" $decoration.publishDate $decoration.version )</div>
-      <div class="clear">
-        <hr/>
-      </div>
-    </div>
+		#if ($customConfig.getChild('displayBreadCrumbs'))
+			#if ( $customConfig.getChild('displayBreadCrumbs').getValue().equals('true') )	
+			    <div class="breadcrumbs">
+			      #publishDate( "left" $decoration.publishDate $decoration.version )
+			      <div class="xright">#links( $decoration.body.links )#publishDate( "right" $decoration.publishDate $decoration.version )</div>
+			      <div class="clear">
+			        <hr/>
+			      </div>
+			    </div>
+			#end
+		#else	
+		    <div class="breadcrumbs">
+		      #publishDate( "left" $decoration.publishDate $decoration.version )
+		      <div class="xright">#links( $decoration.body.links )#publishDate( "right" $decoration.publishDate $decoration.version )</div>
+		      <div class="clear">
+		        <hr/>
+		      </div>
+		    </div>
+		 #end
+		 
+	##---------------------------------------------------------------
+	## Start of actual body content
+	<!-- MAIN SITE CONTENT -->
      <div class="container">
 #if ( $customConfig.getChild('sideMenus').getValue().equals('true') )
         <div class="row">
