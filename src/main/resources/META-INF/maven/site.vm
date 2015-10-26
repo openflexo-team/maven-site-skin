@@ -552,7 +552,7 @@
 		
 		#if ($customConfig.getChild('includeVersionLinks'))
 		 	   #if ( $customConfig.getChild('includeVersionLinks').getValue().equals('true') )
-        	        <script>$("#versionsLinks").load("/inc/php/versions_as_html_list.php"); </script>
+		 	           	        <script>$("#versionsLinks").load("/inc/php/versions_as_html_list.php?path=$project.getProperties().getProperty("deploy.dir")"); </script>
                #end
 		#end
 
@@ -604,8 +604,8 @@
             <!--========== BEGIN HEADER ==========-->
             <header id="header" class="header-main">              
             	<nav id="all-navbars" class="navbar navbar-default navbar-fixed-top" role="navigation">
-                          <a class="navbar-brand page-scroll" href="index.html">OpenFlexo</a>
-            		<div id="mainmenu"></div>
+                          <a class="navbar-brand page-scroll" href="https://www.openflexo.org">OpenFlexo</a>
+            		<div id="mainmenu" class="hidden-xs"></div>
 			<div id="pagemenu"></div>
                 </nav>
             </header>
@@ -619,13 +619,17 @@
       #banner( $decoration.bannerRight "bannerRight" )
 -->
 
+	
+
+<!-- Bread Crumbs -->
+	<div class="container">
+
 		#if ($customConfig.getChild('displayBreadCrumbs'))
 			#if ( $customConfig.getChild('displayBreadCrumbs').getValue().equals('true') )	
 			    <div class="breadcrumbs">
 			      #publishDate( "left" $decoration.publishDate $decoration.version )
 			      <div class="xright">#links( $decoration.body.links )#publishDate( "right" $decoration.publishDate $decoration.version )</div>
 			      <div class="clear">
-			        <hr/>
 			      </div>
 			    </div>
 			#else
@@ -637,39 +641,46 @@
 		      #publishDate( "left" $decoration.publishDate $decoration.version )
 		      <div class="xright">#links( $decoration.body.links )#publishDate( "right" $decoration.publishDate $decoration.version )</div>
 		      <div class="clear">
-		        <hr/>
 		      </div>
 		    </div>
 		 #end
 		 
+	</div>
+	
 	##---------------------------------------------------------------
 	## Start of actual body content
 	<!-- MAIN SITE CONTENT -->
-     <div class="container">
+	<div class="container">
+	
+	
+    <div class="row"> <!-- Start of body Row-->
+        
+	<!-- Side Menus -->
+	
 #if ( $customConfig.getChild('sideMenus').getValue().equals('true') )
-        <div class="row">
     		<div class="col-sm-3 col-md-3 col-lg-3" id="leftColumn">
 	      		<div id="navcolumn">
 		       #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
 		       #mainMenu( $decoration.body.menus )
 		       #if ($customConfig.getChild('includeVersionLinks'))
 					#if ( $customConfig.getChild('includeVersionLinks').getValue().equals('true') )
-						<h1> Will Include versions here</h1>
+						<h5>Released Versions</h5>
 						<div id="versionsLinks"></div>
 					#end
 			   #end
 		       #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
 		      </div>
 		 </div>
-    		<div class="col-sm-9 col-md-9 col-lg-9" id="bodyColumn">
+    		<div class="col-sm-9 col-md-9 col-lg-9" id="bodyColumn"> <!-- start of body Content Column --> 
 #else
-		<div class="col-sm-12 col-md-12 col-lg-12" id="bodyColumn">
+		<div class="col-sm-12 col-md-12 col-lg-12" id="bodyColumn"><!-- start of body Content Column --> 
 #end
    		   <div id="contentBox">
         		$bodyContent
       		   </div>
-    	        </div>
-	</div>
+	</div><!-- End of body Content Column --> 
+	</div> <!-- End of body Row-->
+	</div> <!-- End of Container -->
 
 <!-- footer Row -->
     <footer class="text-off-white">
