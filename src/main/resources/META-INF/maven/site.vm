@@ -509,9 +509,10 @@
 
 
 	<!-- Master Stylesheets -->
+       	<link rel="stylesheet" href="/css/openflexo-maven-base.css">
+       	<link rel="stylesheet" href="/css/openflexo-maven-theme.css">
 		<link rel="stylesheet" href="/css/mobile.css">
-        	<link rel="stylesheet" href="/css/openflexo.css">
-
+       	<link rel="stylesheet" href="/css/openflexo.css">
         <!--========== END CSS INCLUSION ==========-->
 
 #end
@@ -646,6 +647,11 @@
 	      		<div id="navcolumn">
 		       #publishDate( "navigation-top" $decoration.publishDate $decoration.version )
 		       #mainMenu( $decoration.body.menus )
+		       #if ($customConfig.getChild('includeVersionLinks'))
+					#if ( $customConfig.getChild('includeVersionLinks').getValue().equals('true') )
+						<h1> Will Include versions here</h1>
+					#end
+			   #end
 		       #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
 		      </div>
 		 </div>
