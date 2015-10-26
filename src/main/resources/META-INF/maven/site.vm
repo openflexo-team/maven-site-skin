@@ -547,7 +547,13 @@
 		#if (! $customConfig.getChild('localMenu'))
         	        <script>$("#mainmenu").load("/inc/html/menu-vers-minisites.html");$("#pagemenu").load("/inc/html/defaultmenu.html"); </script>
 		#else
-	                <script>$("#mainmenu").load("/inc/html/menu-vers-minisites.html");$("#pagemenu").load("$customConfig.getChild('localMenu').getValue()"); </script>
+	                <script>$(mainmenu").load("/inc/html/menu-vers-minisites.html");$("#pagemenu").load("$customConfig.getChild('localMenu').getValue()"); </script>
+		#end
+		
+		#if ($customConfig.getChild('includeVersionLinks'))
+		 	   #if ( $customConfig.getChild('includeVersionLinks').getValue().equals('true') )
+        	        <script>$("#versionsLinks").load("/inc/php/versions_as_html_list.php"); </script>
+               #end
 		#end
 
 
@@ -649,6 +655,7 @@
 		       #if ($customConfig.getChild('includeVersionLinks'))
 					#if ( $customConfig.getChild('includeVersionLinks').getValue().equals('true') )
 						<h1> Will Include versions here</h1>
+						<div id="versionsLinks"></div>
 					#end
 			   #end
 		       #publishDate( "navigation-bottom" $decoration.publishDate $decoration.version )
