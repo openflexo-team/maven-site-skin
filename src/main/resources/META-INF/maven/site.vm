@@ -623,9 +623,9 @@
 			      </div>
 			    </div>
 			#else
+				<!--NO BREAD CRUMBS -->
 				<div class="extra-space-l"></div>
 			#end
-			
 		#else	
 		    <div class="breadcrumbs">
 		      #publishDate( "left" $decoration.publishDate $decoration.version )
