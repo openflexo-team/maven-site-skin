@@ -552,7 +552,7 @@
 		
 		#if ($customConfig.getChild('includeVersionLinks'))
 		 	   #if ( $customConfig.getChild('includeVersionLinks').getValue().equals('true') )
-		 	           	        <script>$("#versionsLinks").load("/inc/php/versions_as_html_list.php?path=$project.getProperties().getProperty("deploy.dir")"); </script>
+		 	           	        <script>$("#versionsLinks").load("/inc/php/versions_as_html_list.php?path=$project.getProperties().getProperty("sitedeploy.dir")"); </script>
                #end
 		#end
 
