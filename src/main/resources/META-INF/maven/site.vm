@@ -547,7 +547,7 @@
 		#if (! $customConfig.getChild('localMenu'))
         	        <script>$("#mainmenu").load("/inc/html/menu-vers-minisites.html");$("#pagemenu").load("/inc/html/defaultmenu.html"); </script>
 		#else
-	                <script>$(mainmenu").load("/inc/html/menu-vers-minisites.html");$("#pagemenu").load("$customConfig.getChild('localMenu').getValue()"); </script>
+	                <script>$("#mainmenu").load("/inc/html/menu-vers-minisites.html");$("#pagemenu").load("$customConfig.getChild('localMenu').getValue()"); </script>
 		#end
 		
 		#if ($customConfig.getChild('includeVersionLinks'))
