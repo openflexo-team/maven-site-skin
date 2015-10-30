@@ -684,6 +684,7 @@
 	</div> <!-- End of Container -->
 
 <!-- footer Row -->
+	<div class="extra-space-l"></div>
     <footer class="text-off-white">
     <div id="footer" class="footer">
     <div class="container text-center wow fadeIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
